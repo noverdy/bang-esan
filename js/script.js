@@ -17,16 +17,6 @@ logo.onclick = () => {
 	}
 }
 
-window.onload = () => {
-	const navbar = document.getElementById('navbar')
-	const paddingVertical = 20
-	document.querySelectorAll('.section').forEach((section) => {
-		section.style.paddingTop = `calc(${navbar.offsetHeight}px + ${paddingVertical}px)`
-		section.style.paddingBottom = `${paddingVertical}px`
-		section.style.height = '100vh'
-	})
-}
-
 window.onscroll = () => {
 	const navbar = document.getElementById('navbar')
 	if (
@@ -40,3 +30,15 @@ window.onscroll = () => {
 		navbar.style.backgroundColor = 'rgba(0, 0, 0, 0.5)'
 	}
 }
+
+const main = () => {
+	const navbar = document.getElementById('navbar')
+	const paddingVertical = 20
+	document.querySelectorAll('.section').forEach((section) => {
+		section.style.paddingTop = `calc(${navbar.offsetHeight}px + ${paddingVertical}px)`
+		section.style.paddingBottom = `${paddingVertical}px`
+		section.style.height = '100vh'
+	})
+}
+
+main()
