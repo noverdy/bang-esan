@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+:root {
+    --dark-gray: #2C2F33;
+    --blacker: #050509;
+    --black: #15181a;
+    --dark-blue: #28308f;
+    --blue: #404EED;
+    --light-blue: #5865F2;
+    --gray: #99AAB5;
+    --light-gray: #b7cad6;
+    --white: #F6F6F6;
+}
+
+button {
+    padding: 1em 2em;
+    background-color: var(--light-blue);
+    color: white;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 30px;
+    transition: filter 0.1s;
+}
+
+button:hover {
+    filter: brightness(1.2);
+}
+
+h1 {
+    font-size: 5em;
+}
+
+h4 {
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1em 20em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: background-color 0.5s, backdrop-filter 0.5s;
+}
+
+.menu {
+    color: var(--light-gray);
+    cursor: pointer;
+    transition: color 0.1s;
+    text-decoration: none;
+    user-select: none;
+}
+
+.menu:hover {
+    color: white;
+}
+
+.home-section {
+    color: white;
+    background-color: linear-gradient(0deg, rgba(44, 47, 51, 1) 50%, rgba(21, 24, 26, 1) 100%);
+    background-image: url("../img/background.png");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.home-section > * {
+    text-align: center;
+}
+
+.logo {
+    width: 20%;
+}
+
+.logo-active {
+    animation: surprise 1s;
+}
+
+@keyframes surprise {
+    50% {
+        opacity: 100%;
+    }
+
+    100% {
+        transform: scale(1000%, 1000%) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.scroll-down {
+    color: var(--light-gray);
+    font-size: 2em;
+    display: block;
+    text-decoration: none;
+    animation: scrolldown 2s infinite;
+} 
+
+@keyframes scrolldown {
+    0% {
+        transform: translateY(0px);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 100%;
+    }
+
+    100% {
+        transform: translateY(0.8em);
+        opacity: 0;
+    }
+}
+
+.scroll-down:hover {
+    color: white;
+}
+
+.desc-section {
+    background-color: var(--blacker);
+}
+
+.commands-section {
+    background-color: var(--black);
+}
+
+.support-section {
+    background-color: var(--blacker);
+}
